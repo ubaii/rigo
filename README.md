@@ -18,3 +18,7 @@
 - Save Output
 - Custom List Angka
 - Mass User
+
+<b>CONTACT PAGE</b>
+<a href="https://t.me/ubaii_id" title="Telegram">- Telegram
+<a href="https://fb.me/kakko.go.id" title="Facebook">- Facebook
