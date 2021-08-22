@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/Ubaii/rigo/main/rigo.png" alt="Rigo Logo" width="800" height="400"/>
 </p>
 
-===== FITUR =====
+  <b>FITUR</b>
 - Custom Jumlah Angka
 - Custom Angka Togel
 - Custom Login Page
@@ -12,7 +12,7 @@
 - Username = Password Mode ( Voucher )
 - Username & Password Mode ( User & pass )
 
-===== INSYALLAH DILANJUTKAN =====
+  <b>INSYALLAH DILANJUTKAN</b>
 - Undetectable
 - Fast BruteForce
 - Save Output
