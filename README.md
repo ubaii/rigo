@@ -1,3 +1,4 @@
-# rigo
-Simple BruteForce Attack For MikroTik Hotspot Login
-![logo](https://raw.githubusercontent.com/Ubaii/rigo/main/rigo.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Ubaii/rigo/main/rigo.png" alt="Sublime's custom image"/>
+  # rigo
+</p>
