@@ -19,4 +19,4 @@
 - Custom List Angka
 - Mass User
 
-<b>CONTACT PAGE : </b><a href="https://t.me/ubaii_id" title="Telegram" target="_blank">Telegram<a href="https://fb.me/kakko.go.id" title="Facebook" target="_blank">Facebook
+<b>CONTACT PAGE : </b><a href="https://t.me/ubaii_id" title="Telegram" target="_blank">Telegram</a> - <a href="https://fb.me/kakko.go.id" title="Facebook" target="_blank">Facebook</a>
