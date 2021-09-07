@@ -85,13 +85,11 @@ def custRand():
 		totalChars = read['customRandom']['totalVal1']
 		totalNum = read['customRandom']['totalVal2']
 		firstPosition = read['customRandom']['firstPosition']
-		if chars == 'a-Z' or 'A-z':
+		if chars in ["a-Z","A-z"]:
 			chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-		elif chars == 'a-z':
+		elif chars in ["a-z"]:
 			chars = 'abcdefghijklmnopqrstuvwxyz'
-		elif chars == 'A-Z':
-			chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-		if num == '0-9':
+		if num in ["0-9"]:
 			num = '0123456789'
 		char = ''
 		nume = ''
