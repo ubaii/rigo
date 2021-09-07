@@ -44,8 +44,7 @@ def checkUp(ver):
 		r = req.get("https://raw.githubusercontent.com/ubaii/rigo/main/ver.txt", timeout=5)
 	except(req.ConnectionError, req.Timeout):
 		print(f' [{c.error}!{c.n}] tidak dapat mengecek update.')
-		print(f' [{c.error}!{c.n}] harap ubah isi dari checkUpdate dari true menjadi false!')
-		exit()
+		print(f' [{c.error}!{c.n}] menghiraukan.')
 	if r.text != ver:
 		return True
 	else:
@@ -134,11 +133,11 @@ def uspMode(target, totalDigit, randomValue, loginPage, statusPage, maxLogin, us
 				if redirectValidate == 'OK':
 					if useCustomRandom == 'true':
 						if httpChap == 'true':
-							rand = grand(totalDigit, randomValue)
+							rand = custRand()
 							awkoawko = hashlib.md5(rand.encode())
 							passw = rand
 						else:
-							rand = grand(totalDigit, randomValue)
+							rand = custRand()
 							passw = rand
 					else:
 						if httpChap == 'true':
